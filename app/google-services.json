@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "780302410713",
+    "firebase_url": "https://tech-411-5c416.firebaseio.com",
+    "project_id": "tech-411-5c416",
+    "storage_bucket": "tech-411-5c416.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780302410713:android:e8e0ede3b3902559",
+        "android_client_info": {
+          "package_name": "com.stvkre.tech411"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780302410713-hfgamjaiug96vopcnffi86ihshlbvor1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHwBrcklPEFQEcy_BOrpdhhGYk3LfwYtI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
