@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.stvkre.tech411.ui.CreateAccountActivity"
+    tools:context="com.stvkre.tech411.CreateAccountActivity"
     android:background="@color/colorPrimaryDark">
 
     <LinearLayout
