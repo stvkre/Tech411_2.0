@@ -13,7 +13,8 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.registerTextView) TextView mRegisterTextView;
+    @Bind(R.id.registerTextView)
+    TextView mRegisterTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
-        mRegisterTextView.setOnClickListener(this);
+        mRegisterTextView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new
+                        Intent(LoginActivity.this, AccountActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -33,4 +44,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
         }
     }
+
+
 }
