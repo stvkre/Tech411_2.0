@@ -30,6 +30,13 @@
             android:layout_height="wrap_content"
             android:padding="13dp"
             android:text="Post Description goes here" />
+
+        <TextView
+            android:id="@+id/post_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:text="Post url goes here" />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

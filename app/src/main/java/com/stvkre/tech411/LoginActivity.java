@@ -22,16 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
-        mRegisterTextView.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new
-                        Intent(LoginActivity.this, AccountActivity.class);
-                startActivity(intent);
-
-            }
-        });
+        mRegisterTextView.setOnClickListener(this);
 
     }
 
