@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <EditText
             android:id="@+id/nameEditText"
@@ -71,38 +72,47 @@
             android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
 
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/createUserButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Sign up"
-            android:background="@color/colorAccent"
-            android:layout_marginTop="15dp"
-            android:textColor="@color/colorPrimary" />
 
-        <TextView
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorAccent"
+            android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="15sp"
             android:text="Already have an account? Log in here!"
             android:id="@+id/loginTextView"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+        android:layout_alignTop="@+id/createUserButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
 
-    </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
-        android:textColor="@color/colorAccent"
+        android:textColor="@android:color/white"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:id="@+id/textView" />
+
+    <Button
+        android:id="@+id/createUserButton"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:paddingRight="30dp"
+        android:text="Sign up"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
