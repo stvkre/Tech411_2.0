@@ -2,8 +2,10 @@ package com.stvkre.tech411;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.text.TextUtilsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -84,16 +88,22 @@ public static final String TAG = CreateAccountActivity.class.getSimpleName();
 
         // create new user account on Firebase
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "Authentication successful");
-                } else {
-                    Toast.makeText(CreateAccountActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirmPassword)) {
+            Toast.makeText(CreateAccountActivity.this, "Fields cannot be empty.", Toast.LENGTH_LONG).show();
+
+        } else {
+            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (!task.isSuccessful()) {
+
+                        Toast.makeText(CreateAccountActivity.this, "Authentication failed.", Toast.LENGTH_LONG).show();
+                    }
                 }
-            }
-        });
+            });
+        }
+
+
     }
 
     // authenticating accounts
