@@ -97,7 +97,7 @@ public static final String TAG = CreateAccountActivity.class.getSimpleName();
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (!task.isSuccessful()) {
 
-                        Toast.makeText(CreateAccountActivity.this, "Authentication failed.", Toast.LENGTH_LONG).show();
+                        Toast.makeText(CreateAccountActivity.this, "Authentication failed. Ensure all fields are populated", Toast.LENGTH_LONG).show();
                     }
                 }
             });
