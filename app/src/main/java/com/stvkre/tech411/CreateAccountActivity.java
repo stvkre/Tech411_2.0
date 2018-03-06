@@ -43,7 +43,7 @@ public static final String TAG = CreateAccountActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Log.v("@createAccount","");
+        Log.v("@CreateAccount","");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
         ButterKnife.bind(this);

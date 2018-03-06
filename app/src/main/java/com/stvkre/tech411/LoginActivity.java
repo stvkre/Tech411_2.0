@@ -10,7 +10,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-// navigating back to create account activity
+// navigating to create account activity
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,8 +32,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View view) {
         if (view == mRegisterTextView) {
-            Intent intent = new
-                    Intent(LoginActivity.this, CreateAccountActivity.class);
+            Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);
             startActivity(intent);
             finish();
         }
